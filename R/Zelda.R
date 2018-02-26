@@ -22,7 +22,7 @@
 #'@return NULL
 #'
 #' @examples
-#' # Play a "ping" sound
+#' # Play a "fanfare" sound
 #' Zelda()
 #' 
 #' \dontrun{

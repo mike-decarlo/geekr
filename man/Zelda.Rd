@@ -30,7 +30,7 @@ an error. This is in order to not risk aborting or stopping the process that
 you wanted to get notified about.
 }
 \examples{
-# Play a "ping" sound
+# Play a "fanfare" sound
 Zelda()
 
 \dontrun{

@@ -26,7 +26,7 @@
 #'@return NULL
 #'
 #'@examples
-#' # Play a "ping" sound
+#' # Play a "save" sound
 #' ChronoTrigger()
 #' 
 #' \dontrun{

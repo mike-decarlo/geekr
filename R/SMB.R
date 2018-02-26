@@ -50,26 +50,26 @@ SMB <- function(sound = 1, expr = NULL) {
   
   expr
   sounds <- c(
-    coin = ""
-    , gameover = ""
-    , mariodie = ""
-    , warning = ""
-    , stage_clear = ""
-    , world_clear = ""
-    , one_up = ""
-    , bowser_fall = ""
-    , brick_smash = ""
-    , bump = ""
-    , flagpole = ""
-    , fireball = ""
-    , jump_small = ""
-    , jump_super = ""
-    , kick = ""
-    , pause = ""
-    , pipe = ""
-    , powerup = ""
-    , powerup_appears = ""
-    , stomp = ""
+    coin = "smb_coin.wav"
+    , gameover = "smb_gameover.wav"
+    , mariodie = "smb_mariodie.wav"
+    , warning = "smb_warning.wav"
+    , stage_clear = "smb_stage_clear.wav"
+    , world_clear = "smb_world_clear.wav"
+    , one_up = "smb_1-up.wav"
+    , bowser_fall = "smb_bowserfalls.wav"
+    , breakblock = "smb_breakblock.wav"
+    , bump = "smb_bump.wav"
+    , flagpole = "smb_flagpole.wav"
+    , fireball = "smb_fireball.wav"
+    , jump_small = "smb_jump-small.wav"
+    , jump_super = "smb_jump-super.wav"
+    , kick = "smb_kick.wav"
+    , pause = "smb_pause.wav"
+    , pipe = "smb_pipe.wav"
+    , powerup = "smb_powerup.wav"
+    , powerup_appears = "smb_powerup_appears.wav"
+    , stomp = "smb_stomp.wav"
   )
   
   sound_path <- NULL
@@ -92,11 +92,11 @@ SMB <- function(sound = 1, expr = NULL) {
       }
     }
   } else {
-    sound_path <- system.file(paste("SMB/", sounds[sound], sep=""), package="geekr")
+    sound_path <- system.file(paste("sounds/SMB/", sounds[sound], sep=""), package="geekr")
   }
   
   if(is.null(sound_path)) { # play a random sound
-    sound_path <- system.file(paste("SMB/", sample(sounds, size=1), sep=""), package="geekr")
+    sound_path <- system.file(paste("sounds/SMB/", sample(sounds, size=1), sep=""), package="geekr")
   }
   
   tryCatch(play_file(sound_path), error = function(ex) {

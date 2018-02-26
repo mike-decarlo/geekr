@@ -90,11 +90,11 @@ SMB <- function(sound = 1, expr = NULL) {
       }
     }
   } else {
-    sound_path <- system.file(paste("sounds/SMB/", sounds[sound], sep=""), package="geekr")
+    sound_path <- system.file(paste("SMB/", sounds[sound], sep=""), package="geekr")
   }
   
   if(is.null(sound_path)) { # play a random sound
-    sound_path <- system.file(paste("sounds/SMB/", sample(sounds, size=1), sep=""), package="geekr")
+    sound_path <- system.file(paste("SMB/", sample(sounds, size=1), sep=""), package="geekr")
   }
   
   tryCatch(play_file(sound_path), error = function(ex) {

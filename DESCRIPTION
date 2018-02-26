@@ -1,11 +1,14 @@
 Package: geekr
 Type: Package
 Title: Task notification pacxkage
-Version: 0.0.0.9001
+Version: 0.0.0.9003
 Encoding: UTF-8
 Date: 2018-02-26
 Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
-Description: The {geekr} package is simply an expansion on the {beepr} package by rasmusab@github.com.
+Description: The {geekr} package is simply an expansion on the {beepr} package
+  by rasmusab@github.com. The expansion intends to include multiple beep() like
+  function named after a different classic video game from which the sounds
+  originate.
 Depends: R (>= 3.4.3)
 License: file LICENSE
 Imports: 

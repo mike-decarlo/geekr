@@ -23,15 +23,22 @@ http urls, https is not supported.}
 
 \item{expr}{An optional expression to be excecuted before the sound.}
 }
-\value{
-NULL
-
-#' @examples
+\description{
+\code{ChronoTrigger} plays a short sound which is useful if you want to get notified, 
+for example, when a script has finished. As an added bonus there are a number
+of different sounds to choose from.
+}
+\details{
+If \code{ChronoTrigger} is not able to play the sound a warning is issued rather than 
+an error. This is in order to not risk aborting or stopping the process that
+you wanted to get notified about.
+}
+\examples{
 # Play a "ping" sound
 ChronoTrigger()
 
 \dontrun{
-# Play \code{"gulls"} instead of a \code{"save"}.
+# Play \\code{"gulls"} instead of a \\code{"save"}.
 ChronoTrigger("gulls")
 # or
 ChronoTrigger(16)
@@ -42,14 +49,4 @@ ChronoTrigger(0)
 # Update all packages and "ping" when it's ready
 update.packages(ask=FALSE); ChronoTrigger()
 }
-}
-\description{
-\code{ChronoTrigger} plays a short sound which is useful if you want to get notified, 
-for example, when a script has finished. As an added bonus there are a number
-of different sounds to choose from.
-}
-\details{
-If \code{ChronoTrigger} is not able to play the sound a warning is issued rather than 
-an error. This is in order to not risk aborting or stopping the process that
-you wanted to get notified about.
 }

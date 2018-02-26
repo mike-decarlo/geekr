@@ -26,7 +26,7 @@
 #'
 #'@return NULL
 #'
-#'#' @examples
+#'@examples
 #' # Play a "ping" sound
 #' SuperMario()
 #' 

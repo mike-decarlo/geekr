@@ -24,15 +24,22 @@ http urls, https is not supported.}
 
 \item{expr}{An optional expression to be excecuted before the sound.}
 }
-\value{
-NULL
-
-#' @examples
+\description{
+\code{SuperMario} plays a short sound which is useful if you want to get notified, 
+for example, when a script has finished. As an added bonus there are a number
+of different sounds to choose from.
+}
+\details{
+If \code{SuperMario} is not able to play the sound a warning is issued rather than 
+an error. This is in order to not risk aborting or stopping the process that
+you wanted to get notified about.
+}
+\examples{
 # Play a "ping" sound
 SuperMario()
 
 \dontrun{
-# Play \code{"bump"} instead of a \code{"coin"}.
+# Play \\code{"bump"} instead of a \\code{"coin"}.
 SuperMario("bump")
 # or
 SuperMario(11)
@@ -43,14 +50,4 @@ SuperMario(0)
 # Update all packages and "ping" when it's ready
 update.packages(ask=FALSE); SuperMario()
 }
-}
-\description{
-\code{SuperMario} plays a short sound which is useful if you want to get notified, 
-for example, when a script has finished. As an added bonus there are a number
-of different sounds to choose from.
-}
-\details{
-If \code{SuperMario} is not able to play the sound a warning is issued rather than 
-an error. This is in order to not risk aborting or stopping the process that
-you wanted to get notified about.
 }

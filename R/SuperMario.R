@@ -100,7 +100,7 @@ SuperMario <- function(sound = 1, expr = NULL) {
   }
   
   tryCatch(play_file(sound_path), error = function(ex) {
-    warning("SMB() could not play the sound due to the following error:\n", ex)
+    warning("SuperMario() could not play the sound due to the following error:\n", ex)
   })
 }
 

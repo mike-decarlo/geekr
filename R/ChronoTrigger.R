@@ -97,7 +97,7 @@ ChronoTrigger <- function(sound = 1, expr = NULL) {
   }
   
   tryCatch(play_file(sound_path), error = function(ex) {
-    warning("CT() could not play the sound due to the following error:\n", ex)
+    warning("ChronoTrigger() could not play the sound due to the following error:\n", ex)
   })
 }
 

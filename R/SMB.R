@@ -43,6 +43,8 @@
 #' update.packages(ask=FALSE); SMB()
 #' }
 #'@export
+#'@import audio
+#'@import stringr
 
 SMB <- function(sound = 1, expr = NULL) {
   

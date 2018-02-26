@@ -2,15 +2,13 @@ Package: geekr
 Type: Package
 Title: Task notification pacxkage
 Version: 0.0.0.9001
-Authors@R: person("Mike", "DeCarlo", email = "mdecarlo@knowesis-inc.com", role = c("aut", "cre"))
+Encoding: UTF-8
+Date: 2018-02-26
+Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
 Description: The {geekr} package is simply an expansion on the {beepr} package by rasmusab@github.com.
 Depends: R (>= 3.4.3)
 License: file LICENSE
-Encoding: UTF-8
-LazyData: true
-RoxygenNote: 6.0.1.9000
-Imports:
+Imports: 
   stringr (>= 1.0.0),
   audio
-Suggests:
-VignetteBuilder: knitr
+RoxygenNote: 6.0.1.9000

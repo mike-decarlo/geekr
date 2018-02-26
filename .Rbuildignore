@@ -1,2 +1,12 @@
-^.*\.Rproj$
-^\.Rproj\.user$
+^.*\.Rproj$         # Automatically added by RStudio,
+^\.Rproj\.user$     # used for temporary files. 
+^README\.Rmd$       # An Rmarkdown file used to generate README.md
+^cran-comments\.md$ # Comments for CRAN submission
+^NEWS\.md$          # A news file written in Markdown
+^\.travis\.yml$     # Used for continuous integration testing with travis
+^\*.tar.gz          # Bundled package
+^\*.zip             # Windows binary package
+^\*.tgz             # iOS binary package
+^\tests             # tests directory
+^\data\*.rda        # don't build .rda files, only .Rdata
+^Building.R         # ignore script for building tools

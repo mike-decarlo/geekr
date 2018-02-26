@@ -2,5 +2,6 @@
 
 export(ChronoTrigger)
 export(SuperMario)
+export(Zelda)
 import(audio)
 import(stringr)

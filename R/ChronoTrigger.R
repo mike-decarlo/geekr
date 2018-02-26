@@ -1,31 +1,31 @@
 #' Play a short sound from Chrono Trigger
 #' 
-#'\code{ChronoTrigger} plays a short sound which is useful if you want to get notified, 
-#'for example, when a script has finished. As an added bonus there are a number
-#'of different sounds to choose from.
+#' \code{ChronoTrigger} plays a short sound which is useful if you want to get notified, 
+#' for example, when a script has finished. As an added bonus there are a number
+#' of different sounds to choose from.
 #'
-#'If \code{ChronoTrigger} is not able to play the sound a warning is issued rather than 
-#'an error. This is in order to not risk aborting or stopping the process that
-#'you wanted to get notified about.
+#' If \code{ChronoTrigger} is not able to play the sound a warning is issued rather than 
+#' an error. This is in order to not risk aborting or stopping the process that
+#' you wanted to get notified about.
 #'
-#'@param sound character string or number specifying what sound to be played by 
-#'  either specifying one of the built in sounds, specifying the path to a wav 
-#'  file or specifying an url. The default is 1. Possible sounds are:
-#'  \enumerate{ \item \code{"save"} \item \code{"draw"} \item
-#'  \code{"leenes_bell"} \item \code{"croak"} \item \code{"chest"}
-#'  \item \code{"epoch"} \item \code{"strike"} \item \code{"temporal"}
-#'  \item \code{"timegate"} \item \code{"wrong"} \item
-#'  \code{"black_tyrano"} \item \code{"continuum"} \item \code{"destruction"} \item
-#'  \code{"water_drip"} \item \code{"grunt"} \item \code{"gulls"} \item
-#'  \code{"lavos"} \item \code{"robo"} }
-#'  If \code{sound} does not match any of the sounds above, or is a valid path
-#'  or url, a random sound will be played. Currently \code{ChronoTrigger} can only handle
-#'  http urls, https is not supported.
-#'@param expr An optional expression to be excecuted before the sound.
+#' @param sound character string or number specifying what sound to be played by 
+#'   either specifying one of the built in sounds, specifying the path to a wav 
+#'   file or specifying an url. The default is 1. Possible sounds are:
+#'   \enumerate{ \item \code{"save"} \item \code{"draw"} \item
+#'   \code{"leenes_bell"} \item \code{"croak"} \item \code{"chest"}
+#'   \item \code{"epoch"} \item \code{"strike"} \item \code{"temporal"}
+#'   \item \code{"timegate"} \item \code{"wrong"} \item
+#'   \code{"black_tyrano"} \item \code{"continuum"} \item \code{"destruction"} \item
+#'   \code{"water_drip"} \item \code{"grunt"} \item \code{"gulls"} \item
+#'   \code{"lavos"} \item \code{"robo"} }
+#'   If \code{sound} does not match any of the sounds above, or is a valid path
+#'   or url, a random sound will be played. Currently \code{ChronoTrigger} can only handle
+#'   http urls, https is not supported.
+#' @param expr An optional expression to be excecuted before the sound.
 #'
-#'@return NULL
+#' @return NULL
 #'
-#'@examples
+#' @examples
 #' # Play a "save" sound
 #' ChronoTrigger()
 #' 
@@ -41,9 +41,9 @@
 #' # Update all packages and "ping" when it's ready
 #' update.packages(ask=FALSE); ChronoTrigger()
 #' }
-#'@export
-#'@import audio
-#'@import stringr
+#' @export
+#' @import audio
+#' @import stringr
 
 ChronoTrigger <- function(sound = 1, expr = NULL) {
   

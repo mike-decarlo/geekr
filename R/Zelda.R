@@ -1,25 +1,25 @@
 #' Play a short sound from Zelda
 #' 
-#'\code{Zelda} plays a short sound which is useful if you want to get notified, 
-#'for example, when a script has finished. As an added bonus there are a number
-#'of different sounds to choose from.
+#' \code{Zelda} plays a short sound which is useful if you want to get notified, 
+#' for example, when a script has finished. As an added bonus there are a number
+#' of different sounds to choose from.
 #'
-#'If \code{Zelda} is not able to play the sound a warning is issued rather than 
-#'an error. This is in order to not risk aborting or stopping the process that
-#'you wanted to get notified about.
+#' If \code{Zelda} is not able to play the sound a warning is issued rather than 
+#' an error. This is in order to not risk aborting or stopping the process that
+#' you wanted to get notified about.
 #'
-#'@param sound character string or number specifying what sound to be played by 
-#'  either specifying one of the built in sounds, specifying the path to a wav 
-#'  file or specifying an url. The default is 1. Possible sounds are:
-#'  \enumerate{ \item \code{"fanfare"} \item \code{"agahnim"} \item
-#'  \code{"mudora"} \item \code{"chest"} \item \code{"flute"}
-#'  \item \code{"heartcontainer"} \item \code{"mushroom"} \item \code{"warp"} }
-#'  If \code{sound} does not match any of the sounds above, or is a valid path
-#'  or url, a random sound will be played. Currently \code{Zelda} can only handle
-#'  http urls, https is not supported.
-#'@param expr An optional expression to be excecuted before the sound.
+#' @param sound character string or number specifying what sound to be played by 
+#'   either specifying one of the built in sounds, specifying the path to a wav 
+#'   file or specifying an url. The default is 1. Possible sounds are:
+#'   \enumerate{ \item \code{"fanfare"} \item \code{"agahnim"} \item
+#'   \code{"mudora"} \item \code{"chest"} \item \code{"flute"}
+#'   \item \code{"heartcontainer"} \item \code{"mushroom"} \item \code{"warp"} }
+#'   If \code{sound} does not match any of the sounds above, or is a valid path
+#'   or url, a random sound will be played. Currently \code{Zelda} can only handle
+#'   http urls, https is not supported.
+#' @param expr An optional expression to be excecuted before the sound.
 #'
-#'@return NULL
+#' @return NULL
 #'
 #' @examples
 #' # Play a "fanfare" sound
@@ -37,9 +37,9 @@
 #' # Update all packages and "ping" when it's ready
 #' update.packages(ask=FALSE); Zelda()
 #' }
-#'@export
-#'@import audio
-#'@import stringr
+#' @export
+#' @import audio
+#' @import stringr
 
 Zelda <- function(sound = 1, expr = NULL) {
   

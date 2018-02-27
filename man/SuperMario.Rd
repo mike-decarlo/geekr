@@ -39,7 +39,7 @@ you wanted to get notified about.
 SuperMario()
 
 \dontrun{
-# Play \\code{"bump"} instead of a \\code{"coin"}.
+# Play "bump" instead of a "coin".
 SuperMario("bump")
 # or
 SuperMario(11)

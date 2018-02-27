@@ -26,7 +26,7 @@
 #' Zelda()
 #' 
 #' \dontrun{
-#' # Play \code{"warp"} instead of a \code{"fanfare"}.
+#' # Play "warp" instead of a "fanfare".
 #' Zelda("gulls")
 #' # or
 #' Zelda(8)

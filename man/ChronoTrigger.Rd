@@ -38,7 +38,7 @@ you wanted to get notified about.
 ChronoTrigger()
 
 \dontrun{
-# Play \\code{"gulls"} instead of a \\code{"save"}.
+# Play "gulls" instead of a "save".
 ChronoTrigger("gulls")
 # or
 ChronoTrigger(16)

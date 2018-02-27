@@ -32,7 +32,7 @@ you wanted to get notified about.
 Analytics()
 
 \dontrun{
-# Play \\code{"all_done"} instead of a \\code{"all_done"}.
+# Play "all_done" instead of a "all_done".
 Analytics("all_done")
 # or
 Analytics(1)

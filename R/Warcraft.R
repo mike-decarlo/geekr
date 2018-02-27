@@ -27,7 +27,7 @@
 #' Warcraft()
 #' 
 #' \dontrun{
-#' # Play \code{"hello"} instead of a \code{"jobsdone"}.
+#' # Play "hello" instead of a "jobsdone".
 #' Warcraft("hello")
 #' # or
 #' Warcraft(2)

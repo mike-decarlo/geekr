@@ -24,7 +24,7 @@
 #' Analytics()
 #' 
 #' \dontrun{
-#' # Play \code{"all_done"} instead of a \code{"fanfare"}.
+#' # Play \code{"all_done"} instead of a \code{"all_done"}.
 #' Analytics("all_done")
 #' # or
 #' Analytics(1)

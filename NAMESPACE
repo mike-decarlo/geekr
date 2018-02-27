@@ -3,6 +3,7 @@
 export(Analytics)
 export(ChronoTrigger)
 export(SuperMario)
+export(Warcraft)
 export(Zelda)
 import(audio)
 import(stringr)

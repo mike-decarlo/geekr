@@ -1,7 +1,7 @@
 Package: geekr
 Type: Package
 Title: Task notification pacxkage
-Version: 0.0.1.0001
+Version: 0.0.1.0002
 Encoding: UTF-8
 Date: 2018-02-26
 Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
@@ -12,6 +12,5 @@ Description: The {geekr} package is simply an expansion on the {beepr} package
 Depends: R (>= 3.4.3)
 License: file LICENSE
 Imports: 
-  stringr (>= 1.0.0),
   audio
 RoxygenNote: 6.0.1.9000

@@ -39,7 +39,6 @@
 #' }
 #' @export
 #' @import audio
-#' @import stringr
 
 Zelda <- function(sound = 1, expr = NULL) {
   
@@ -58,12 +57,12 @@ Zelda <- function(sound = 1, expr = NULL) {
   sound_path <- NULL
   if(is.na(sounds[sound]) || length(sounds[sound]) != 1) {
     if(is.character(sound)) {
-      sound <- str_trim(sound)
+      sound <- trimws(sound)
       if(file.exists(sound)) {
         sound_path <- sound
-      } else if(str_detect(sound, "^https://")) {
+      } else if(grepl("^https://", sound)) {
         warning("Can't currently use https urls, only http.")
-      } else if(str_detect(sound, "^http://")) {
+      } else if(grepl("^https://", sound)) {
         temp_file <- tempfile(pattern="")
         if(download.file(sound, destfile = temp_file, quiet = TRUE) == 0) { # The file was successfully downloaded
           sound_path <- temp_file

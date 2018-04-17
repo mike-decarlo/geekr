@@ -15,7 +15,7 @@ Some prerequisites to getting this product up and running in R:
 Now that R is setup (with or without RStudio) and the {devtools} package is installed, it's possible to start downloading and installing R packages directly from Github. To download, install, and start using the {geekr} package follow the steps:
 - Download and install the {geekr} package from Github
   - From R/RStudio console enter: <code>devtools::install_github("wolfm4ne/geekr")</code>
-- Load the {gcd} package library
+- Load the {geekr} package library
   - From R/RStudio console enter: <code>library(geekr)</code>
 
 ## Authors

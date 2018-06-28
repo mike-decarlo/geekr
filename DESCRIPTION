@@ -1,16 +1,19 @@
 Package: geekr
-Type: Package
-Title: Task notification pacxkage
 Version: 0.0.1.0002
-Encoding: UTF-8
 Date: 2018-02-26
+Title: Task notification pacxkage
 Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
+Author: Mike DeCarlo [aut, cre]
+Maintainer: Mike DeCarlo <decarlo.michael.j@gmail.com>
+Depends: R (>= 3.4.3), audio
+Imports: audio
 Description: The {geekr} package is simply an expansion on the {beepr} package
   by rasmusab@github.com. The expansion intends to include multiple beep() like
   functions named after a different classic video games from which the sounds
   originate or other popular culture sources.
-Depends: R (>= 3.4.3)
 License: file LICENSE
-Imports: 
-  audio
+URL: https://github.com/mike-decarlo/geekr
+BugReports: https://github.com/mike-decarlo/geekr
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 6.0.1.9000

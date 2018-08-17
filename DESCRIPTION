@@ -5,8 +5,10 @@ Title: geekr: Audible Task Notifications
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
 Maintainer: Mike DeCarlo <mikedecarlo.rdev@gmail.com>
-Depends: R (>= 3.4.3), audio
-Imports: audio
+Depends: R (>= 3.4.3)
+Imports:
+  audio,
+  stringr
 Description: The {geekr} package is simply an expansion on the {beepr} package
   by rasmusab@github.com. The expansion intends to include multiple beep() like
   functions named after a different classic video games from which the sounds

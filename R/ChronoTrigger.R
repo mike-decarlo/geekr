@@ -43,6 +43,7 @@
 #' }
 #' @export
 #' @import audio
+#' @importFrom stringr str_detect
 
 ChronoTrigger <- function(sound = 1, expr = NULL) {
   

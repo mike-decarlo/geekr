@@ -44,6 +44,7 @@
 #' }
 #' @export
 #' @import audio
+#' @importFrom stringr str_detect
 
 SuperMario <- function(sound = 1, expr = NULL) {
   

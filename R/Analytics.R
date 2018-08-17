@@ -37,6 +37,7 @@
 #' }
 #' @export
 #' @import audio
+#' @importFrom stringr str_detect
 
 Analytics <- function(sound = 1, expr = NULL) {
   

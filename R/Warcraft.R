@@ -40,6 +40,7 @@
 #' }
 #' @export
 #' @import audio
+#' @importFrom stringr str_detect
 
 Warcraft <- function(sound = 1, expr = NULL) {
   

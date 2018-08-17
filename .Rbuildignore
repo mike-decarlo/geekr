@@ -9,3 +9,5 @@
 ^\*.tgz             # iOS binary package
 ^\tests             # tests directory
 ^\data\*.rda        # don't build .rda files, only .Rdata
+^appveyor\.yml$
+^\.travis\.yml$

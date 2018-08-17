@@ -1,10 +1,10 @@
 Package: geekr
 Version: 0.0.1.0002
 Date: 2018-02-26
-Title: Task notification pacxkage
-Authors@R: person("Mike", "DeCarlo", email = "decarlo.michael.j@gmail.com", role = c("aut", "cre"))
+Title: geekr: Audible Task Notifications
+Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
-Maintainer: Mike DeCarlo <decarlo.michael.j@gmail.com>
+Maintainer: Mike DeCarlo <mikedecarlo.rdev@gmail.com>
 Depends: R (>= 3.4.3), audio
 Imports: audio
 Description: The {geekr} package is simply an expansion on the {beepr} package

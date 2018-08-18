@@ -9,6 +9,7 @@ Depends: R (>= 3.4.3)
 Imports:
   audio,
   stringr
+Suggests: 
 Description: The {geekr} package is simply an expansion on the {beepr} package
   by rasmusab@github.com. The expansion intends to include multiple beep() like
   functions named after a different classic video games from which the sounds

@@ -38,6 +38,7 @@
 #' @export
 #' @import audio
 #' @importFrom stringr str_detect
+#' @importFrom utils download.file
 
 Analytics <- function(sound = 1, expr = NULL) {
   

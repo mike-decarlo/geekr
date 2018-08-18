@@ -41,6 +41,7 @@
 #' @export
 #' @import audio
 #' @importFrom stringr str_detect
+#' @importFrom utils download.file
 
 Warcraft <- function(sound = 1, expr = NULL) {
   

@@ -44,6 +44,7 @@
 #' @export
 #' @import audio
 #' @importFrom stringr str_detect
+#' @importFrom utils download.file
 
 ChronoTrigger <- function(sound = 1, expr = NULL) {
   

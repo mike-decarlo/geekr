@@ -40,6 +40,7 @@
 #' @export
 #' @import audio
 #' @importFrom stringr str_detect
+#' @importFrom utils download.file
 
 Zelda <- function(sound = 1, expr = NULL) {
   

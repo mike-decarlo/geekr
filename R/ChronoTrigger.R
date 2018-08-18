@@ -103,7 +103,7 @@ ChronoTrigger <- function(sound = 1, expr = NULL) {
 }
 
 is_wav_fname <- function(fname) {
-  str_detect(fname, regexpr("\\.wav$", ignore_case = TRUE))
+  str_detect(fname, "\\.wav$")
 }
 
 play_vlc <- function(fname) {

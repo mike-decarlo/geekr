@@ -5,7 +5,7 @@ Title: geekr: Audible Task Notifications
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]
 Maintainer: Mike DeCarlo <mikedecarlo.rdev@gmail.com>
-Depends: R (>= 3.4.3)
+Depends: R (>= 3.4)
 Imports:
   audio,
   stringr

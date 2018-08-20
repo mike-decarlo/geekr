@@ -1,5 +1,5 @@
 # geekr
-[![Travis-CI Build Status](https://travis-ci.org/mike-decarlo/geekr.svg?branch=master)](https://travis-ci.org/mike-decarlo/geekr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/geekr?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/geekr)
+[![Travis-CI Build Status](https://travis-ci.org/mike-decarlo/geekr.svg?branch=master)](https://travis-ci.org/mike-decarlo/geekr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/mike-decarlo/geekr?branch=master&svg=true)](https://ci.appveyor.com/project/mike-decarlo/geekr) [![codecov](https://codecov.io/gh/mike-decarlo/geekr/branch/master/graph/badge.svg)](https://codecov.io/gh/mike-decarlo/geekr)
 
 The {geekr} package for R contains several functions for audial notifications that can be worked into any R workflow. These include some classic video game sound boards and expansion is intended into other popular culture sound boards as well.
 

@@ -47,7 +47,16 @@ before_install:
   - Rscript -e 'c(physical = parallel::detectCores(logical = FALSE), logical = parallel::detectCores())'
   - export _R_CHECK_TIMINGS_=0
 
+<<<<<<< HEAD
 notifications:
   email:
     on_success: change
     on_failure: change
+=======
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+  
+>>>>>>> e9a61d0a6057648bda615663dd25e394e05c3216

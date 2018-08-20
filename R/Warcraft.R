@@ -41,6 +41,7 @@
 #' @export
 #' @import audio
 #' @importFrom stringr str_detect
+#' @importFrom utils download.file
 
 Warcraft <- function(sound = 1, expr = NULL) {
   
@@ -91,7 +92,7 @@ Warcraft <- function(sound = 1, expr = NULL) {
 }
 
 is_wav_fname <- function(fname) {
-  str_detect(fname, regex("\\.wav$", ignore_case = TRUE))
+  str_detect(fname, "\\.wav$")
 }
 
 play_vlc <- function(fname) {

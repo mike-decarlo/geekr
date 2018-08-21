@@ -1,0 +1,120 @@
+#' Play a short sound from Chrono Trigger
+#'
+#' \code{chrono_trigger} plays a short sound which is useful if you want to get
+#'   notified, for example, when a script has finished. As an added bonus there
+#'   are a number of different sounds to choose from.
+#' If \code{chrono_trigger} is not able to play the sound a warning is issued
+#'   rather than an error. This is in order to not risk aborting or stopping the
+#'   process that you wanted to get notified about.
+#' @param sound character string or number specifying what sound to be played
+#'   by either specifying one of the built in sounds, specifying the path to a
+#'   wav file or specifying an url. The default is 1. Possible sounds are:
+#'   \enumerate{ \item \code{"save"} \item \code{"draw"} \item
+#'   \code{"leenes_bell"} \item \code{"croak"} \item \code{"chest"}
+#'   \item \code{"epoch"} \item \code{"strike"} \item \code{"temporal"}
+#'   \item \code{"timegate"} \item \code{"wrong"} \item
+#'   \code{"black_tyrano"} \item \code{"continuum"} \item \code{"destruction"}
+#'   \item \code{"water_drip"} \item \code{"grunt"} \item \code{"gulls"} \item
+#'   \code{"lavos"} \item \code{"robo"} }
+#'   If \code{sound} does not match any of the sounds above, or is a valid path
+#'   or url, a random sound will be played. Currently \code{chrono_trigger} can
+#'   only handle http urls, https is not supported.
+#' @param expr An optional expression to be excecuted before the sound.
+#' @return NULL
+#' @examples
+#' # Play a "save" sound
+#' chrono_trigger()
+#'
+#' \dontrun{
+#' # Play "gulls" instead of a "save".
+#' chrono_trigger("gulls")
+#' # or
+#' chrono_trigger(16)
+#'
+#' # Play a random sound
+#' chrono_trigger(0)
+#'
+#' # Update all packages and "ping" when it's ready
+#' update.packages(ask=FALSE); chrono_trigger()
+#' }
+#' @importFrom utils download.file
+#' @export
+chrono_trigger <- function(sound = 1, expr = NULL) {
+  expr
+  sounds <- c(
+    save = "savepnt.wav"
+    , draw = "drawpunk.wav"
+    , leenes_bell = "leene.wav"
+    , croak = "croak.wav"
+    , chest = "chest.wav"
+    , epoch = "engage.wav"
+    , strike = "strike.wav"
+    , temporal = "tempforc.wav"
+    , timegate = "timegate.wav"
+    , wrong = "wrongo.wav"
+    , black_tyrano = "blacktyr.wav"
+    , continuum = "continuum.wav"
+    , destruction = "destruct.wav"
+    , water_drip = "drip.wav"
+    , grunt = "grunt.wav"
+    , gulls = "gulls.wav"
+    , lavos = "lavos.wav"
+    , robo = "roboredy.wav"
+  )
+  sound_path <- NULL
+  if (is.na(sounds[sound]) || length(sounds[sound]) != 1) {
+    if (is.character(sound)) {
+      sound <- trimws(sound)
+      if (file.exists(sound)) {
+        sound_path <- sound
+      } else if (grepl("^https://", sound)) {
+        warning("Can't currently use https urls, only http.")
+      } else if (grepl("^http://", sound)) {
+        temp_file <- tempfile(pattern = "")
+        if (download.file(sound, destfile = temp_file, quiet = TRUE) == 0) {
+          sound_path <- temp_file
+        } else {
+          warning(paste("Tried but could not download", sound))
+        }
+      } else {
+        warning(
+          paste(
+            '"'
+            , sound
+            , '" is not a valid sound nor path,'
+            , 'playing a random sound instead.'
+            , sep = ""
+            )
+          )
+      }
+    }
+  } else {
+    sound_path <- system.file(
+      paste(
+        "sounds/CT/"
+        , sounds[sound]
+        , sep = ""
+        )
+      , package = "geekr"
+      )
+  }
+  if (is.null(sound_path)) { # play a random sound
+    sound_path <- system.file(
+      paste(
+        "sounds/CT/"
+        , sample(sounds, size = 1)
+        , sep = ""
+        )
+      , package = "geekr"
+      )
+  }
+  tryCatch(play_file(sound_path), error = function(ex) {
+    warning(
+      paste0(
+        "chrono_trigger() could not play the sound"
+        , " due to the following error:\n"
+        , ex
+        )
+      )
+  })
+}

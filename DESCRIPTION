@@ -1,6 +1,6 @@
 Package: geekr
-Version: 0.0.1.0002
-Date: 2018-02-26
+Version: 0.1.1.0001
+Date: 2018-08-21
 Title: geekr: Audible Task Notifications
 Authors@R: person("Mike", "DeCarlo", email = "mikedecarlo.rdev@gmail.com", role = c("aut", "cre"))
 Author: Mike DeCarlo [aut, cre]

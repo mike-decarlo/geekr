@@ -6,6 +6,7 @@ test_that("no errors works", {
     Warcraft(sound = "F")
     , '"F" is not a valid sound nor path, playing a random sound instead.'
   )
+  Sys.sleep(5)
 })
 
 test_that("https/http", {
@@ -15,12 +16,13 @@ test_that("https/http", {
     )
     , "Can't currently use https urls, only http."
   )
-  expect_warning(
+  Sys.sleep(5)
+  expect_silent(
     Warcraft(
       sound = "http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
     )
-    , "Tried but could not download http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
   )
+  Sys.sleep(5)
 })
 
 test_that("sound from sounds works", {

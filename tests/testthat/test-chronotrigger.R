@@ -17,15 +17,6 @@ test_that("https/http", {
     , "Can't currently use https urls, only http."
   )
   Sys.sleep(5)
-  expect_equal(
-    ChronoTrigger(
-      sound = "http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
-    )
-    , SuperMario(
-      sound = "http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
-    )
-  )
-  Sys.sleep(5)
 })
 
 test_that("sound from sounds works", {

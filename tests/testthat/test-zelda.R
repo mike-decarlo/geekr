@@ -18,9 +18,10 @@ test_that("https returns warning", {
 })
 
 test_that("sound from sounds works", {
-  expect_silent(
+  expect_equal(
     Zelda(
       sound = "fanfare"
     )
+    , Zelda()
   )
 })

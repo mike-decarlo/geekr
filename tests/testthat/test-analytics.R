@@ -18,9 +18,10 @@ test_that("https returns warning", {
 })
 
 test_that("sound from sounds works", {
-  expect_silent(
+  expect_equal(
     Analytics(
       sound = "all_done"
     )
+    , Analytics()
   )
 })

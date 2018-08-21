@@ -16,3 +16,11 @@ test_that("https returns warning", {
     , "Can't currently use https urls, only http."
   )
 })
+
+test_that("sound from sounds works", {
+  expect_silent(
+    ChronoTrigger(
+      sound = 1
+    )
+  )
+})

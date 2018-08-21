@@ -20,7 +20,7 @@ test_that("https returns warning", {
 test_that("sound from sounds works", {
   expect_silent(
     Warcraft(
-      sound = 1
+      sound = "jobsdone"
     )
   )
 })

@@ -8,12 +8,18 @@ test_that("no errors works", {
     )
 })
 
-test_that("https returns warning", {
+test_that("https/http", {
   expect_warning(
     SuperMario(
       sound = "https://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
     )
     , "Can't currently use https urls, only http."
+  )
+  expect_warning(
+    SuperMario(
+      sound = "http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
+    )
+    , "Tried but could not download http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
   )
 })
 

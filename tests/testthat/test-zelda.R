@@ -17,6 +17,9 @@ test_that("https/http", {
     , "Can't currently use https urls, only http."
   )
   Sys.sleep(5)
+  expect_warning(
+    Zelda(sound = "http://amazonsmile.com")
+  )
 })
 
 test_that("sound from sounds works", {

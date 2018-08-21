@@ -1,5 +1,5 @@
 #' Use Aplay to play sound
-#' 
+#'
 #' Uses Aplay player if available
 #' @param fname filename of a .wav sound file
 #' @export

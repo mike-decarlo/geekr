@@ -1,13 +1,11 @@
-#' Play a short sound from warcraft
-#' 
+#' Play a short sound from Warcraft
+#'
 #' \code{warcraft} plays a short sound which is useful if you want to get
 #'   notified, for example, when a script has finished. As an added bonus
 #'   there are a number of different sounds to choose from.
-#'
 #' If \code{warcraft} is not able to play the sound a warning is issued rather
 #'   than an error. This is in order to not risk aborting or stopping the
 #'   process that you wanted to get notified about.
-#'
 #' @param sound character string or number specifying what sound to be played
 #'   by either specifying one of the built in sounds, specifying the path to a
 #'   wav file or specifying an url. The default is 1. Possible sounds are:
@@ -69,12 +67,11 @@ warcraft <- function(sound = 1, expr = NULL) {
         }
       } else {
         warning(
-          paste(
-            '"'
+          paste0(
+            "'"
             , sound
-            , '" is not a valid sound nor path,'
-            , 'playing a random sound instead.'
-            , sep = ""
+            , "' is not a valid sound nor path,"
+            , " playing a random sound instead."
             )
           )
       }
@@ -89,7 +86,7 @@ warcraft <- function(sound = 1, expr = NULL) {
       , package = "geekr"
       )
   }
-  if (is.null(sound_path)) { # play a random sound
+  if (is.null(sound_path)) {
     sound_path <- system.file(
       paste(
         "sounds/warcraft/"

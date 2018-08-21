@@ -1,4 +1,4 @@
-#' Play a short sound from Super Mario Bros.
+#' Play a short sound from Super Mario Bros
 #'
 #' \code{super_mario} plays a short sound which is useful if you want to get
 #'  notified, for example, when a script has finished. As an added bonus there
@@ -7,19 +7,19 @@
 #' If \code{super_mario} is not able to play the sound a warning is issued
 #'  rather than an error. This is in order to not risk aborting or stopping
 #'  the process that you wanted to get notified about.
-#' @param sound character string or number specifying what sound to be played by 
-#'  either specifying one of the built in sounds, specifying the path to a wav 
+#' @param sound character string or number specifying what sound to be played by
+#'  either specifying one of the built in sounds, specifying the path to a wav
 #'  file or specifying an url. The default is 1. Possible sounds are:
 #'  \enumerate{ \item \code{"coin"} \item \code{"gameover"} \item
 #'  \code{"mariodie"} \item \code{"warning"} \item \code{"stage_clear"}
-#'  \item \code{"world_clear"} \item \code{"one_up"} \item 
+#'  \item \code{"world_clear"} \item \code{"one_up"} \item
 #'  \code{"bowser_fall"} \item \code{"breakblock"} \item \code{"bump"} \item
 #'  \code{"flagpole"} \item \code{"fireball"} \item \code{"jump_small"} \item
 #'  \code{"jump_super"} \item \code{"kick"} \item \code{"pause"} \item
 #'  \code{"pipe"} \item \code{"powerup"} \item
 #'  \code{"powerup_appears"} \item \code{"stomp"} }
 #'  If \code{sound} does not match any of the sounds above, or is a valid path
-#'  or url, a random sound will be played. Currently \code{super_mario} can 
+#'  or url, a random sound will be played. Currently \code{super_mario} can
 #'  only handle http urls, https is not supported.
 #' @param expr An optional expression to be excecuted before the sound.
 #' @return NULL
@@ -74,7 +74,7 @@ super_mario <- function(sound = 1, expr = NULL) {
       } else if (grepl("^https://", sound)) {
         warning("Can't currently use https urls, only http.")
       } else if (grepl("^http://", sound)) {
-        temp_file <- tempfile(pattern="")
+        temp_file <- tempfile(pattern = "")
         if (download.file(sound, destfile = temp_file, quiet = TRUE) == 0) {
           sound_path <- temp_file
         } else {
@@ -83,9 +83,10 @@ super_mario <- function(sound = 1, expr = NULL) {
       } else {
         warning(
           paste0(
-            '"'
+            "'"
             , sound
-            , '" is not a valid sound nor path, playing a random sound instead.'
+            , "' is not a valid sound nor path,"
+            , " playing a random sound instead."
             )
           )
       }

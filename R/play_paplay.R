@@ -1,5 +1,5 @@
 #' Use Paplay to play sound
-#' 
+#'
 #' Uses Paplay player if available
 #' @param fname filename of a .wav sound file
 #' @export

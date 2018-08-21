@@ -1,5 +1,5 @@
 #' Controller to play sound
-#' 
+#'
 #' Uses system appropriate player if available
 #' @param fname filename of a .wav sound file
 #' @export

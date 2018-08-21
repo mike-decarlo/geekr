@@ -1,5 +1,5 @@
 #' Use VLC to play sound
-#' 
+#'
 #' Uses VLC player if available
 #' @param fname filename of a .wav sound file
 #' @export

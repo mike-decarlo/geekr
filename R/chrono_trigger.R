@@ -78,12 +78,11 @@ chrono_trigger <- function(sound = 1, expr = NULL) {
         }
       } else {
         warning(
-          paste(
-            '"'
+          paste0(
+            "'"
             , sound
-            , '" is not a valid sound nor path,'
-            , 'playing a random sound instead.'
-            , sep = ""
+            , "' is not a valid sound nor path,"
+            , " playing a random sound instead."
             )
           )
       }
@@ -98,7 +97,7 @@ chrono_trigger <- function(sound = 1, expr = NULL) {
       , package = "geekr"
       )
   }
-  if (is.null(sound_path)) { # play a random sound
+  if (is.null(sound_path)) {
     sound_path <- system.file(
       paste(
         "sounds/CT/"

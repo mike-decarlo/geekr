@@ -6,6 +6,6 @@
 #' @importFrom audio load.wave
 #' @export
 play_audio <- function(fname) {
-  sfx <- load.wave(fname)
-  play(sfx)
+  sfx <- audio::load.wave(fname)
+  audio::play(sfx)
 }

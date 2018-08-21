@@ -2,7 +2,7 @@
 % Please edit documentation in R/warcraft.R
 \name{warcraft}
 \alias{warcraft}
-\title{Play a short sound from warcraft}
+\title{Play a short sound from Warcraft}
 \usage{
 warcraft(sound = 1, expr = NULL)
 }
@@ -24,8 +24,6 @@ handle http urls, https is not supported.}
 \code{warcraft} plays a short sound which is useful if you want to get
   notified, for example, when a script has finished. As an added bonus
   there are a number of different sounds to choose from.
-}
-\details{
 If \code{warcraft} is not able to play the sound a warning is issued rather
   than an error. This is in order to not risk aborting or stopping the
   process that you wanted to get notified about.

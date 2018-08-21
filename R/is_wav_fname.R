@@ -5,5 +5,5 @@
 #' @importFrom stringr str_detect
 #' @export
 is_wav_fname <- function(fname) {
-  str_detect(fname, "\\.wav$")
+  stringr::str_detect(fname, "\\.wav$")
 }

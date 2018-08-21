@@ -105,7 +105,7 @@ super_mario <- function(sound = 1, expr = NULL) {
     sound_path <- system.file(
       paste(
         "sounds/SMB/"
-        , sample(sounds, size=1)
+        , sample(sounds, size = 1)
         , sep = ""
         )
       , package = "geekr"

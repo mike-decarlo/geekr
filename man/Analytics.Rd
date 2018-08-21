@@ -2,7 +2,7 @@
 % Please edit documentation in R/analytics.R
 \name{analytics}
 \alias{analytics}
-\title{Play a short sound from analytics (group)}
+\title{Play a short sound from Analytics (group)}
 \usage{
 analytics(sound = 1, expr = NULL)
 }
@@ -21,8 +21,6 @@ handle http urls, https is not supported.}
 \code{analytics} plays a short sound which is useful if you want to get
   notified, for example, when a script has finished. As an added bonus there
   are a number of different sounds to choose from.
-}
-\details{
 If \code{analytics} is not able to play the sound a warning is issued rather
   than an error. This is in order to not risk aborting or stopping the
   process that you wanted to get notified about.

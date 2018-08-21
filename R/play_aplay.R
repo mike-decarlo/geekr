@@ -11,7 +11,7 @@ play_aplay <- function(fname) {
       )
     , ignore.stdout = TRUE
     , ignore.stderr = TRUE
-    ,wait = FALSE
+    , wait = FALSE
     )
   invisible(NULL)
 }

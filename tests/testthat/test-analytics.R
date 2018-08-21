@@ -21,6 +21,7 @@ test_that("https/http", {
     Analytics(
       sound = "http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
     )
+    , "Tried but could not download http://themushroomkingdom.net/sounds/wav/smw/smw_1-up.wav"
   )
   Sys.sleep(5)
 })

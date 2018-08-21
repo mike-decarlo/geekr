@@ -64,7 +64,7 @@ Zelda <- function(sound = 1, expr = NULL) {
         sound_path <- sound
       } else if(grepl("^https://", sound)) {
         warning("Can't currently use https urls, only http.")
-      } else if(grepl("^https://", sound)) {
+      } else if(grepl("^http://", sound)) {
         temp_file <- tempfile(pattern="")
         if(download.file(sound, destfile = temp_file, quiet = TRUE) == 0) { # The file was successfully downloaded
           sound_path <- temp_file
